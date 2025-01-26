@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #b2ff66 25%, #66ffb2 50%, #33cc99 75%);
+    color: #2d2d2d;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #004d00;
+}
+
+p {
+    font-size: 24px;
+    color: #005700;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007a00;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #005500;
+}
+
+/* Декоративные элементы на фоне */
+body::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    z-index: 0;
+}

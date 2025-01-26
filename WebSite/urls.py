@@ -18,9 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
     # Импорт функций-отображений из моих приложений
-from main_app.views import main_page
+from main_app.views import main_page, error_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_page)
+    path('', main_page),
+    path('404/', error_404)
 ]

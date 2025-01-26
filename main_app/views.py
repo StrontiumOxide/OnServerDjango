@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseNotFound
 from faker import Faker
 
 # Create your views here.
@@ -15,4 +15,12 @@ def main_page(request: HttpRequest) -> HttpResponse:
         request=request,
         template_name='main_page.html',
         context=context
+    )
+
+def error_404(request: HttpRequest) -> HttpResponse:
+    'Error 404'
+
+    return render(
+        request=request,
+        template_name='404_error.html'
     )
